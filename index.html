@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikingaxe Books</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4efe9; /* Light brown background color */
+        }
+        /* Add CSS for vertical alignment and styling */
+        .vertical-links {
+            position: fixed;
+            left: 10px; /* Adjust for desired distance from left */
+            top: 50px; /* Adjust for top offset */
+            width: 200px;
+            background-color: #d2b48c; /* Tan background color */
+            padding: 10px;
+        }
+
+        .vertical-links a {
+            display: block;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: #8b4513; /* SaddleBrown color for text */
+        }
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: url('City Assassin a novel.jpg') no-repeat center center/cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+        .hero .buttons {
+            margin-top: 20px;
+        }
+        .hero .buttons a {
+            text-decoration: none;
+            color: white;
+            background: #996633; /* Brownish color for buttons */
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 0 10px;
+            transition: background 0.3s ease;
+        }
+        .hero .buttons a:hover {
+            background: #805029; /* Darker brown for hover effect */
+        }
+        .badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #f4a261; /* Sandy brown for badge */
+            color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .intro-section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .intro-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .book-card {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .book-card img {
+            max-width: 100px;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+        .book-card div {
+            text-align: left;
+        }
+        .book-card h3 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        .book-card p {
+            margin: 10px 0;
+        }
+        .cta {
+            margin-top: 40px;
+        }
+        .cta a {
+            text-decoration: none;
+            color: white;
+            background: #8b4513; /* SaddleBrown color for call-to-action buttons */
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        .cta a:hover {
+            background: #5a2d0c; /* Darker shade for hover effect */
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+	<div class="hero-overlay"></div>
+        <div class="hero-content">     
+	<img src="1736472701657.png" alt="Vikingaxe Logo" class="logo" width="150" height="150"> <!-- Added logo -->       
+            <h1>City Assassin: A Novel</h1>
+            <p>Experience the thrilling journey of "City Assassin" — Book One and Two now available in one edition.</p>
+            <div class="buttons">
+                <a href="https://www.amazon.com/City-Assassin-Novel-Benjamin-Andrews/dp/B0D7DF8B82?ref_=ast_author_dp">Get Your Copy Now</a>
+                <a href="about vikingaxe books.html">Learn More</a>
+            </div>
+        </div>
+    </div>
+    <div class="intro-section">
+        <h2>Discover Our Adventures</h2>
+        <div class="book-card">
+            <img src="dannythedinosaur.jpg" alt="Danny the Dinosaur Book Cover">
+            <div>
+                <h3>Danny the Dinosaur</h3>
+                <p>Join Danny the Dinosaur on a delightful adventure that sparks curiosity and imagination for young readers. Perfect for bedtime stories and family reading time!</p>
+                <a href="link-to-danny-dinosaur">Learn More</a>
+                <a href="Childs play.html">Childrens Activity Page</a>        
+            </div>
+        </div>
+        <div class="book-card">
+            <img src="Missionfield_Mars_Cover.jpg" alt="Missionfield Mars Book Cover">
+            <div>
+                <h3>Missionfield Mars</h3>
+                <p>In 2050, the Martian colonies face challenges of survival and faith. Follow the gripping journey of a missionary who dares to bring hope to the red planet.</p>
+                <a href="link-to-missionfield-mars">Pre-Order Now</a>
+            </div>
+        </div>
+        <div class="cta">
+            <a href="AI viking book list page.html">See All Books</a>
+        </div>
+    </div>
+</body>
+</html>

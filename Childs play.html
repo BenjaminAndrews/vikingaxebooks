@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikingaxe Books - Books</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #4E3629; /* Dark Brown */
+            color: #F5F5DC; /* Beige */
+        }
+        .header {
+            background: #8B4513; /* Saddle Brown */
+            color: #F5F5DC; /* Beige */
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        .books-section {
+            padding: 20px;
+        }
+        .book {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #A0522D; /* Sienna */
+            border-radius: 5px;
+            background-color: #6F4E37; /* Coffee */
+        }
+        .book img {
+            max-width: 150px;
+            margin-right: 20px;
+            border-radius: 5px;
+            border: 2px solid #D2B48C; /* Tan */
+        }
+        .book-details {
+            flex: 1;
+        }
+        .book-details h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.5rem;
+            color: #D2B48C; /* Tan */
+        }
+        .book-details p {
+            margin: 0 0 10px 0;
+            color: #F5F5DC; /* Beige */
+        }
+        .book-details a {
+            display: inline-block;
+            padding: 10px 15px;
+            background: #8B4513; /* Saddle Brown */
+            color: #F5F5DC; /* Beige */
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .book-details a:hover {
+            background: #A0522D; /* Lighter Saddle Brown */
+        }
+    </style>
+</head>
+<body>
+<div class="section">
+<br /><a href="AI viking book.html" Style="color: orange;">Home</a><br />
+    <h2>Interactive Coloring</h2>
+    <p>Draw Danny the Dinosaur right here on our website! Choose your colors and click to paint.</p>
+    <canvas id="coloringCanvas" width="500" height="500" style="border:1px solid #333;"></canvas>
+    <br>
+    <input type="color" id="colorPicker" value="#FF0000"> <!-- Color picker -->
+    <button onclick="clearCanvas()">Clear Canvas</button>
+</div>
+
+<script>
+    const canvas = document.getElementById('coloringCanvas');
+    const ctx = canvas.getContext('2d');
+    let painting = false;
+
+    canvas.addEventListener('mousedown', startPainting);
+    canvas.addEventListener('mouseup', stopPainting);
+    canvas.addEventListener('mousemove', draw);
+
+    function startPainting(event) {
+        painting = true;
+        draw(event);
+    }
+
+    function stopPainting() {
+        painting = false;
+        ctx.beginPath();
+    }
+
+    function draw(event) {
+        if (!painting) return;
+        const rect = canvas.getBoundingClientRect();
+        ctx.lineWidth = 5;
+        ctx.lineCap = 'round';
+        ctx.strokeStyle = document.getElementById('colorPicker').value;
+        ctx.lineTo(event.clientX - rect.left, event.clientY - rect.top);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(event.clientX - rect.left, event.clientY - rect.top);
+    }
+
+    function clearCanvas() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+</script>
+
+
+    <div class="book">
+        <img src="dannythedinosaur.jpg" alt="Danny the Dinosaur Book Cover">
+        <div class="book-details">
+            <h3>Danny the Dinosaur</h3>
+            <p>Join Danny the Dinosaur on a delightful adventure that sparks curiosity and imagination for young readers.</p>
+            <a href="https://www.amazon.com/Danny-Dinosaur-Benjamin-Andrews-ebook/dp/B079QF7RG4?ref_=ast_author_dp">Order a Kindle Edition Now</a>
+        </div>
+    </div>
+    </div>	
+    <h2>Coloring Pages</h2>
+    <p>Bring Danny the Dinosaur to life with your creativity! Click the links below to download printable coloring pages.</p>
+    <ul>
+        <li><a href="danny and his friend.pdf" download style="color: Orange;">Download Coloring Page Danny and the Dragon</a></li>
+        <li><a href="Danny and the Dragon.pdf" download style="color: Orange;">Download Coloring Page Danny and his friend</a></li>
+        <li><a href="Danny walks is China.pdf" download style="color: Orange;">Download Coloring Page Danny walks in China</a></li>
+    </ul>
+</div>
+
+
+</body>
+</html>
